@@ -1,0 +1,104 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+
+@font-face {
+    font-family: "Abril Fatface";
+    src: url(media/fonts/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(media/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+    color:#B57555;
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: "Abril Fatface";
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 3em;
+    color: #8AA2DE;
+}
+
+h2 {
+    font-style: italic;
+    color: #7BA2AB; 
+}
+
+h3 {
+    color: #DE998A;
+}
+
+footer {
+
+}
+
+a:link {
+    color: #162445;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8AA2DE
+}
+
+a:hover {
+    color: #DE998A;
+    text-decoration: underline;
+}
+
+/* specific divs */
+
+.page-wrapper {
+    display: grid;
+}
+
+.sidebar {
+
+}
+
+.summary {
+    font-style: italic;
+}
+
+.preamble {
+
+}
+
+.main-supporting{
+
+}
+
+.participation {
+
+}
+
+.benefits {
+
+}
+
+.requirements {
+
+}
+
