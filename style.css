@@ -28,12 +28,12 @@
 body {
     font-family: Roboto;
     color: #B57555;
+    line-height: 2em;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     background-image: url(media/images/forrest.jpg);
     background-size: 100%;
     background-position: center;
@@ -59,6 +59,11 @@ h2 {
     color:grey; 
     opacity: 0.7;
     width: 20em;
+    padding-top: 1em;
+}
+
+h2:hover{
+    font-style: normal;
 }
 
 h3 {
@@ -66,7 +71,16 @@ h3 {
 }
 
 footer {
-    border: 1px solid grey;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(media/images/forrest.jpg);
+    background-size: 100%;
+    width: 100%;
+    height: 7em;
+    padding-top: 3em;
+    box-sizing: border-box;
+    font-family: "Abril Fatface";
+    font-size: 2em;
 }
 
 a:link {
@@ -92,31 +106,26 @@ a:hover {
     overflow: hidden;
 }
 
-
 .summary {
-    font-style: italic;
+    width: 20em;
+    height: 20em;
     padding: 2em;
+    font-style: italic;
     box-sizing: border-box;
     border: 1px solid grey;
-
 
 }
 
 .preamble {
-    margin: 2em;
+    width: 100%;
     padding: 2em;
-    width: 50%;
-    display: grid;
     box-sizing: border-box;
     border: 1px solid grey;
 
 }
 
 .main-supporting{
-    margin: 2em;
-    padding: 2em;
-    width: 50%;
-    display: grid;
+    width: 100%;
     box-sizing: border-box;
     border: 1px solid grey;
 
@@ -140,36 +149,48 @@ a:hover {
 }
 
 .benefits {
-    margin: 20px;
+    margin: 2em;
+    padding: 2em;
     box-sizing: border-box;
     border: 1px solid grey;
 
 }
 
 .requirements {
-    margin: 20px;
+    margin: 2em;
+    padding: 2em;
     box-sizing: border-box;
     border: 1px solid grey;
 
 }
 
 .sidebar {
-    display: grid;
-    border: 1px solid grey;
-
+    position: absolute;
 }
 
-.design-select {
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
     border: 1px solid grey;
+}
+
+.design-selection {
+    border: 1px solid red;
+    margin: 2em;
 
 }
 
 .zen-resources {
     border: 1px solid grey;
+    margin: 2em;
 
 }
 
 .design-archives {
     border: 1px solid grey;
+    margin: 2em;
 
 }
