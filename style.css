@@ -26,6 +26,9 @@
 }
 
 body {
+    /* background-image: url(media/images/Dawn.jpg);
+    background-position: fixed;
+    background-size: 100%; */
     font-family: Roboto;
     color:#B57555;
     border: 1px solid grey;
