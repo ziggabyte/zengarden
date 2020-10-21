@@ -20,28 +20,148 @@
     src: url(media/fonts/Roboto-Regular.ttf);
 }
 
+/*----TAR BORT DEFAULT-FORMATERING----*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/*----PÅVERKAR ALLT----*/
 body {
     font-family: Roboto;
     color: #B57555;
     line-height: 2em;
 }
 
+/*----HELA SIDAN, grid 2x3----*/
+.page-wrapper {
+    width: 100%;
+    background-color:white;;
+}
+
+/*----INTRO, grid 2x2----*/
+.intro {
+    display: grid;
+    grid-template-areas: "header header"
+                        "preamble summary";
+    grid-template-columns: 60% 40%;
+    grid-area: intro;
+    background-color: sandybrown;
+}
+
 header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 15em;
     background-image: url(media/images/forrest.jpg);
     background-size: 100%;
-    background-position: center;
-    height: 40em;
-    box-sizing: border-box;
-    padding-left: 20em;
-    padding-top: 12em;
+    background-position-y: center;
+    width: 100%;
+    height: 80vh;
+    grid-area: header;
 }
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+    font-size: .9em;
+    box-sizing: border-box;
+    grid-area: summary;
+    text-align: right;
+    margin: 4em;
+    padding: 3em;
+    background-color:white;
+    border-radius: 100%;
+}
+
+.preamble {
+    box-sizing: border-box;
+    grid-area: preamble;
+    margin: 4em;
+    padding: 3em;
+    background-color:white;
+}
+
+/*----MAIN ink FOOTER, grid 3x2----*/
+
+.main-supporting{
+    display: grid;
+    grid-template-areas:"explanation participation"
+                        "benefits requirements"
+                        "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 600px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    grid-area: main;
+}
+
+.main-supporting>div{
+    padding: 3em;
+}
+
+.explanation {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    grid-area: explanation;
+}
+
+.participation {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    grid-area: participation;
+}
+
+.benefits {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    grid-area: benefits;
+}
+
+.requirements {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    grid-area: requirements;
+}
+
+/*----FOOTER----*/
+
+footer {
+    font-family: "Abril Fatface";
+    font-size: 2em;
+    border: 1px solid grey;
+    grid-area: footer;
+    order: -2;
+}
+
+/*----SIDEBAR----*/
+
+.sidebar {
+    border: 1px solid grey;
+    grid-area: side;
+}
+
+.wrapper {
+    border: 1px solid grey;
+}
+
+.design-selection {
+    border: 1px solid red;
+}
+
+.zen-resources {
+    border: 1px solid grey;
+}
+
+.design-archives {
+    border: 1px solid grey;
+}
+
+/*----RENT DEKORATIVT---*/
 
 h1, h2, h3, h4 {
     font-family: "Abril Fatface";
@@ -50,15 +170,13 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 4em;
-    color:#DE998A;
-    width: 10em;
+    color:#162445;
 }
 
 h2 {
     font-style: italic;
     color:grey; 
     opacity: 0.7;
-    width: 20em;
     padding-top: 1em;
 }
 
@@ -68,19 +186,6 @@ h2:hover{
 
 h3 {
     color: #DE998A;
-}
-
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    background-image: url(media/images/forrest.jpg);
-    background-size: 100%;
-    width: 100%;
-    height: 7em;
-    padding-top: 3em;
-    box-sizing: border-box;
-    font-family: "Abril Fatface";
-    font-size: 2em;
 }
 
 a:link {
@@ -97,100 +202,5 @@ a:hover {
     text-decoration: underline;
 }
 
-/* specific divs */
-
-.page-wrapper {
-    width: 100%;
-    display: grid;
-    margin: auto;
-    overflow: hidden;
-}
-
-.summary {
-    width: 20em;
-    height: 20em;
-    padding: 2em;
-    font-style: italic;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.preamble {
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.main-supporting{
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.explanation {
-    margin: 2em;
-    padding: 2em;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.participation {
-    margin: 2em;
-    padding: 2em;
-    box-sizing: border-box;
-    border: 1px solid grey;
 
 
-}
-
-.benefits {
-    margin: 2em;
-    padding: 2em;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.requirements {
-    margin: 2em;
-    padding: 2em;
-    box-sizing: border-box;
-    border: 1px solid grey;
-
-}
-
-.sidebar {
-    position: absolute;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-    border: 1px solid grey;
-}
-
-.design-selection {
-    border: 1px solid red;
-    margin: 2em;
-
-}
-
-.zen-resources {
-    border: 1px solid grey;
-    margin: 2em;
-
-}
-
-.design-archives {
-    border: 1px solid grey;
-    margin: 2em;
-
-}
