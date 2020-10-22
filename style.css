@@ -20,162 +20,40 @@
     src: url(media/fonts/Roboto-Regular.ttf);
 }
 
-/*----TAR BORT DEFAULT-FORMATERING----*/
+/*----FIXAR FÖR ALLT PÅ SIDAN----*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/*----PÅVERKAR ALLT----*/
 body {
     font-family: Roboto;
     color: #B57555;
     line-height: 2em;
-}
-
-/*----HELA SIDAN, grid 2x3----*/
-.page-wrapper {
     width: 100%;
-    background-color:white;;
-}
-
-/*----INTRO, grid 2x2----*/
-.intro {
-    display: grid;
-    grid-template-areas: "header header"
-                        "preamble summary";
-    grid-template-columns: 60% 40%;
-    grid-area: intro;
-    background-color: sandybrown;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    padding-left: 15em;
     background-image: url(media/images/forrest.jpg);
-    background-size: 100%;
-    background-position-y: center;
-    width: 100%;
-    height: 80vh;
-    grid-area: header;
-}
-
-.summary {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-style: italic;
-    font-size: .9em;
-    box-sizing: border-box;
-    grid-area: summary;
-    text-align: right;
-    margin: 4em;
-    padding: 3em;
-    background-color:white;
-    border-radius: 100%;
-}
-
-.preamble {
-    box-sizing: border-box;
-    grid-area: preamble;
-    margin: 4em;
-    padding: 3em;
-    background-color:white;
-}
-
-/*----MAIN ink FOOTER, grid 3x2----*/
-
-.main-supporting{
-    display: grid;
-    grid-template-areas:"explanation participation"
-                        "benefits requirements"
-                        "footer footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 600px;
-    box-sizing: border-box;
-    border: 1px solid grey;
-    grid-area: main;
-}
-
-.main-supporting>div{
-    padding: 3em;
-}
-
-.explanation {
-    box-sizing: border-box;
-    border: 1px solid grey;
-    grid-area: explanation;
-}
-
-.participation {
-    box-sizing: border-box;
-    border: 1px solid grey;
-    grid-area: participation;
-}
-
-.benefits {
-    box-sizing: border-box;
-    border: 1px solid grey;
-    grid-area: benefits;
-}
-
-.requirements {
-    box-sizing: border-box;
-    border: 1px solid grey;
-    grid-area: requirements;
-}
-
-/*----FOOTER----*/
-
-footer {
-    font-family: "Abril Fatface";
-    font-size: 2em;
-    border: 1px solid grey;
-    grid-area: footer;
-    order: -2;
-}
-
-/*----SIDEBAR----*/
-
-.sidebar {
-    border: 1px solid grey;
-    grid-area: side;
-}
-
-.wrapper {
-    border: 1px solid grey;
-}
-
-.design-selection {
-    border: 1px solid red;
-}
-
-.zen-resources {
-    border: 1px solid grey;
-}
-
-.design-archives {
-    border: 1px solid grey;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 /*----RENT DEKORATIVT---*/
 
-h1, h2, h3, h4 {
+h1, h2, h3{
     font-family: "Abril Fatface";
     letter-spacing: 0.05em;
 }
 
 h1 {
     font-size: 4em;
+    line-height: 1em;
     color:#162445;
 }
 
 h2 {
     font-style: italic;
-    color:grey; 
+    color:#DE998A; 
     opacity: 0.7;
     padding-top: 1em;
 }
@@ -203,4 +81,125 @@ a:hover {
 }
 
 
+/*----INTRO, grid 2x2----*/
+.intro {
+    display: grid;
+    grid-template-areas: "header header"
+                        "preamble summary";
+    grid-template-columns: 60% 40%;
+    grid-area: intro;
+    
+}
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15em;
+    width: 100%;
+    height: 50vh;
+    grid-area: header;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+    font-size: .9em;
+    grid-area: summary;
+    text-align: right;
+    margin: 10vh;
+    padding: 3em;
+    background-color: white;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.preamble {
+    grid-area: preamble;
+    margin: 10vh;
+    padding: 3em;
+    background-color: white ;
+    height: 60vh;
+}
+
+/*----MAIN ink FOOTER, grid 3x2----*/
+
+.main-supporting>div{
+    width: 60%;
+    margin: 3em;
+    padding: 3em;
+    background-color: white;
+    border: 1px solid transparent;
+    position: relative; 
+    float: right;
+}
+
+.main-supporting h3 {
+    padding: 1em 0em;
+    font-size: 2em;
+    color: #162445;
+} 
+
+.explanation {
+    grid-area: explanation;
+}
+
+.participation {
+    grid-area: participation;
+}
+
+.benefits {
+    grid-area: benefits;
+}
+
+.requirements {
+    grid-area: requirements;
+}
+
+/*----FOOTER----*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 6em;
+    font-family: "Abril Fatface";
+    font-size: 2em;
+    margin-left: 2em;
+    padding: 1em;
+    line-height: 2em;
+    
+    position: relative;
+    top: 30em;
+    background-color: white;
+}
+
+/*----SIDEBAR----*/
+
+.sidebar {
+    position: absolute;
+    top: 120vh;
+    background-color: white;
+    color: #DE998A;
+    margin-left: 3em;
+    margin-top: 7.5em;
+    padding: 1.5em;
+}
+
+.sidebar h3 {
+    color:#DE998A;
+    padding-top: 2em;
+}
+
+.sidebar a {
+    color:#162445;
+}
+
+.sidebar div {
+    padding: 1em;
+}
+
+.sidebar li {
+    list-style-position: inside;
+    list-style: none;
+}
