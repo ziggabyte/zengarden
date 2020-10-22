@@ -107,23 +107,23 @@ header {
     justify-content: center;
     font-style: italic;
     font-size: .9em;
-    grid-area: summary;
     text-align: right;
     margin: 10vh;
     padding: 3em;
     background-color: white;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    grid-area: summary;
 }
 
 .preamble {
-    grid-area: preamble;
     margin: 10vh;
     padding: 3em;
     background-color: white ;
     height: 60vh;
+    grid-area: preamble;
 }
 
-/*----MAIN ink FOOTER, grid 3x2----*/
+/*----MAIN ink FOOTER----*/
 
 .main-supporting>div{
     width: 60%;
@@ -141,22 +141,6 @@ header {
     color: #162445;
 } 
 
-.explanation {
-    grid-area: explanation;
-}
-
-.participation {
-    grid-area: participation;
-}
-
-.benefits {
-    grid-area: benefits;
-}
-
-.requirements {
-    grid-area: requirements;
-}
-
 /*----FOOTER----*/
 
 footer {
@@ -167,11 +151,10 @@ footer {
     font-size: 2em;
     margin-left: 2em;
     padding: 1em;
+    background-color: white;
     line-height: 2em;
-    
     position: relative;
     top: 30em;
-    background-color: white;
 }
 
 /*----SIDEBAR----*/
@@ -179,11 +162,11 @@ footer {
 .sidebar {
     position: absolute;
     top: 120vh;
-    background-color: white;
     color: #DE998A;
     margin-left: 3em;
     margin-top: 7.5em;
     padding: 1.5em;
+    background-color: white;
 }
 
 .sidebar h3 {
@@ -200,6 +183,5 @@ footer {
 }
 
 .sidebar li {
-    list-style-position: inside;
     list-style: none;
 }
